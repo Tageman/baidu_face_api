@@ -1,4 +1,12 @@
 # -*- coding:utf-8 -*-
+# author:rxg
+"""
+requests api :
+不要直接使用因为在里面有信息这边没有做马赛克掉
+建议直接申请百度云之后自己申请信息
+
+"""
+
 from urllib import urlencode
 import requests
 import base64
