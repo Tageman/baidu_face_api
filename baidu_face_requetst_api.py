@@ -21,7 +21,10 @@ class BaiDu_Face_API():
 
 
     def get_access_token(self):
-
+        """
+        get access_token
+        :return:access_token
+        """
         headers = {
             'Content-Type': 'application/json;charset=UTF-8'
         }
@@ -29,11 +32,19 @@ class BaiDu_Face_API():
         return access_token_response.json()['access_token']
 
     def get_img_base64(self):
+        """
+        get img base64
+        :return:img base64
+        """
         with open(self.img_url,'rb') as file:
             ls_f = base64.b64encode(file.read())
             return ls_f
 
     def requests_baidu_api(self):
+        """
+        get baidu face API response
+        :return:get result for baidu face API
+        """
         headers = {
             'Content-type': 'application/x-www-form-urlencoded'
         }
@@ -45,6 +56,9 @@ class BaiDu_Face_API():
 
 
 if __name__ == '__main__':
+    """
+    program entrance
+    """
     face_url = 'https://aip.baidubce.com/rest/2.0/face/v2/detect'
     img_url = '/Users/ydz/Desktop/test/baidu_face/Experiment/helo.jpg'
     token_url = 'https://aip.baidubce.com/oauth/2.0/token'
